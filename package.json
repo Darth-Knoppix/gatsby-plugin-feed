@@ -1,0 +1,33 @@
+{
+  "name": "@darth-knoppix/gatsby-plugin-feed",
+  "version": "0.1.0",
+  "description": "A Gatsby plugin to generate RSS, JSON and Atom feeds using Feed by jpmonette",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir . --ignore '**/*.test.js'",
+    "watch": "babel -w src --out-dir . --ignore '**/*.test.js'",
+    "test": "jest"
+  },
+  "author": "Seth Corker <seth.corker@gmail.com>",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "rss",
+    "atom",
+    "jsonfeed",
+    "feed"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "feed": "^4.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.0",
+    "@babel/core": "^7.10.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.10.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.9.6",
+    "@babel/plugin-transform-react-jsx": "^7.9.4",
+    "@babel/preset-env": "^7.10.0",
+    "jest": "^26.0.1"
+  }
+}

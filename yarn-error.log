@@ -1,0 +1,46 @@
+Arguments: 
+  /Users/seth.corker/.nvm/versions/node/v8.11.4/bin/node /usr/local/Cellar/yarn/1.22.4/libexec/bin/yarn.js add Feed
+
+PATH: 
+  /Users/seth.corker/.nvm/versions/node/v8.11.4/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/seth.corker/Library/Android/sdk/emulator:/Users/seth.corker/Library/Android/sdk/tools:/Users/seth.corker/Library/Android/sdk/tools/bin:/Users/seth.corker/Library/Android/sdk/platform-tools
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  8.11.4
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/Feed: Not found
+      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:66987:18)
+      at Request.self.callback (/usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:140748:22)
+      at emitTwo (events.js:126:13)
+      at Request.emit (events.js:214:7)
+      at Request.<anonymous> (/usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:141720:10)
+      at emitOne (events.js:116:13)
+      at Request.emit (events.js:211:7)
+      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:141642:12)
+      at Object.onceWrapper (events.js:313:30)
+      at emitNone (events.js:111:20)
+
+npm manifest: 
+  {
+    "name": "gatsby-plugin-feed",
+    "version": "0.1.0",
+    "description": "A Gatsby plugin to generate RSS, JSON and Atom feeds using Feed by jpmonette",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
