@@ -27,7 +27,7 @@ const formatLinkData = {
   },
 };
 
-exports.onRenderBody = ({ setHeadComponents, pathname }, pluginOptions) => {
+exports.onRenderBody = ({ setHeadComponents }, pluginOptions) => {
   const { feeds, output } = {
     ...defaultOptions,
     ...pluginOptions,
@@ -35,7 +35,7 @@ exports.onRenderBody = ({ setHeadComponents, pathname }, pluginOptions) => {
 
   const links = feeds
     .filter(byMatch)
-    .map((feed, i) =>
+    .map(() =>
       Object.keys(formatLinkData)
         .filter((x) => supportedFormats.includes(x))
         .filter((x) => !!output[x])
