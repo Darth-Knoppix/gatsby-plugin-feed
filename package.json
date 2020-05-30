@@ -3,9 +3,12 @@
   "version": "0.0.0-development",
   "description": "A Gatsby plugin to generate RSS, JSON and Atom feeds using Feed by jpmonette",
   "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Darth-Knoppix/gatsby-plugin-feed"
+    "url": "git+https://github.com/Darth-Knoppix/gatsby-plugin-feed.git"
   },
   "scripts": {
     "commit": "npx git-cz",
@@ -15,7 +18,9 @@
     "semantic-release": "semantic-release"
   },
   "homepage": "https://github.com/Darth-Knoppix/gatsby-plugin-feed",
-  "bugs": "https://github.com/Darth-Knoppix/gatsby-plugin-feed/issues",
+  "bugs": {
+    "url": "https://github.com/Darth-Knoppix/gatsby-plugin-feed/issues"
+  },
   "author": "Seth Corker <seth.corker@gmail.com>",
   "keywords": [
     "gatsby",
