@@ -3,11 +3,18 @@
   "version": "0.1.0",
   "description": "A Gatsby plugin to generate RSS, JSON and Atom feeds using Feed by jpmonette",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Darth-Knoppix/gatsby-plugin-feed"
+  },
   "scripts": {
+    "commit": "npx git-cz",
     "build": "babel src --out-dir . --ignore '**/*.test.js'",
     "watch": "babel -w src --out-dir . --ignore '**/*.test.js'",
     "test": "jest"
   },
+  "homepage": "https://github.com/Darth-Knoppix/gatsby-plugin-feed",
+  "bugs": "https://github.com/Darth-Knoppix/gatsby-plugin-feed/issues",
   "author": "Seth Corker <seth.corker@gmail.com>",
   "keywords": [
     "gatsby",
@@ -28,6 +35,15 @@
     "@babel/plugin-transform-modules-commonjs": "^7.9.6",
     "@babel/plugin-transform-react-jsx": "^7.9.4",
     "@babel/preset-env": "^7.10.0",
+    "cz-conventional-changelog": "3.2.0",
     "jest": "^26.0.1"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
