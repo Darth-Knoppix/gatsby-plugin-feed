@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Darth-Knoppix/gatsby-plugin-feed.git"
+    "url": "git@github.com:Darth-Knoppix/gatsby-plugin-feed.git"
   },
   "scripts": {
     "commit": "npx git-cz",
