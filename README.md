@@ -116,3 +116,7 @@ module.exports = {
   ],
 };
 ```
+
+## Who uses it?
+
+- [Seth Corker's Benevolent Bytes Blog](https://blog.sethcorker.com)
