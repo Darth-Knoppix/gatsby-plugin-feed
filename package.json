@@ -48,6 +48,13 @@
   "peerDependencies": {
     "gatsby": "^2.1.0"
   },
+  "files": [
+    "default-options.js",
+    "gatsby-node.js",
+    "gatsby-ssr.js",
+    "index.js",
+    "utils.js"
+  ],
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
