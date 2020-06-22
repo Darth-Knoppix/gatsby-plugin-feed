@@ -56,9 +56,8 @@ exports.onPostBuild = async ({ graphql }, pluginOptions) => {
     await Promise.all(
       formats.map(async (format) => {
         const formatFn = formatFeedMap[format];
-        const fileName = new URL(options.feedLinks[format]).pathname;
 
-        const outputPath = path.join(publicPath, fileName);
+        const outputPath = path.join(publicPath, options.feedLinks[format]);
 
         return new Promise((resolve, reject) => {
           fs.writeFile(

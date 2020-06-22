@@ -13,9 +13,9 @@ export const defaultOptions = {
   updated: new Date(), // optional, default = today
   generator: "Feed for Node.js", // optional, default = 'Feed for Node.js'
   feedLinks: {
-    json: "https://example.com/feed.json",
-    atom: "https://example.com/atom.xml",
-    rss: "https://example.com/rss.xml",
+    json: "/feed.json",
+    atom: "/atom.xml",
+    rss: "/rss.xml",
   },
   author: {
     name: "John Doe",

@@ -17,7 +17,7 @@ function Link({ output, title, link, type, baseUrl = "" }) {
       rel="alternate"
       type={type}
       title={title}
-      href={`${baseUrl}${new URL(href).pathname}`}
+      href={`${baseUrl}${href}`}
     />
   );
 }
