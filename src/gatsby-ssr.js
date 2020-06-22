@@ -9,7 +9,7 @@ function byMatch({ match }) {
   return true;
 }
 
-function Link({ output, title, link, type, baseUrl }) {
+function Link({ output, title, link, type, baseUrl = "" }) {
   const href = link || withPrefix(output);
 
   return (
