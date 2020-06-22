@@ -9,10 +9,17 @@ function byMatch({ match }) {
   return true;
 }
 
-function Link({ output, title, link, type }) {
-  const href = link || withPrefix(output.replace(/^\/?/, `/`));
+function Link({ output, title, link, type, baseUrl }) {
+  const href = link || withPrefix(output);
 
-  return <link rel="alternate" type={type} title={title} href={href} />;
+  return (
+    <link
+      rel="alternate"
+      type={type}
+      title={title}
+      href={`${baseUrl}${new URL(href).pathname}`}
+    />
+  );
 }
 
 const formatLinkData = {
@@ -27,8 +34,8 @@ const formatLinkData = {
   },
 };
 
-exports.onRenderBody = ({ setHeadComponents }, pluginOptions) => {
-  const { feeds, output } = {
+exports.onRenderBody = async ({ setHeadComponents }, pluginOptions) => {
+  const { feeds, feedLinks, baseUrl } = {
     ...defaultOptions,
     ...pluginOptions,
   };
@@ -38,14 +45,15 @@ exports.onRenderBody = ({ setHeadComponents }, pluginOptions) => {
     .map(() =>
       Object.keys(formatLinkData)
         .filter((x) => supportedFormats.includes(x))
-        .filter((x) => !!output[x])
+        .filter((x) => !!feedLinks[x])
         .map((x) => [x, formatLinkData[x]])
         .map(([name, linkData], i) => {
           return (
             <Link
               {...linkData}
-              output={output[name]}
+              output={feedLinks[name]}
               key={`feed-${name}-${i}`}
+              baseUrl={baseUrl}
             />
           );
         })

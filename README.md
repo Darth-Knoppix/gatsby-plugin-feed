@@ -28,6 +28,7 @@ module.exports = {
     {
       resolve: `@darth-knoppix/gatsby-plugin-feed`,
       options: {
+        baseUrl: 'https://example.com'
         // Site query, whatever you need for the setup function will be on `query`
         query: `
       {

@@ -1,11 +1,6 @@
 export const supportedFormats = ["json", "rss", "atom"];
 
 export const defaultOptions = {
-  output: {
-    json: "feed.json",
-    atom: "atom.xml",
-    rss: "rss.xml",
-  },
   encoding: "utf8",
   title: "Feed Title",
   description: "This is my feed!",
@@ -18,9 +13,9 @@ export const defaultOptions = {
   updated: new Date(), // optional, default = today
   generator: "Feed for Node.js", // optional, default = 'Feed for Node.js'
   feedLinks: {
-    json: "https://example.com/json",
-    atom: "https://example.com/atom",
-    rss: "https://example.com/rss",
+    json: "https://example.com/feed.json",
+    atom: "https://example.com/atom.xml",
+    rss: "https://example.com/rss.xml",
   },
   author: {
     name: "John Doe",
